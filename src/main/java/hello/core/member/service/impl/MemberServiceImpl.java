@@ -2,7 +2,6 @@ package hello.core.member.service.impl;
 
 import hello.core.member.Member;
 import hello.core.member.repository.MemberRepository;
-import hello.core.member.repository.impl.MemoryMemberRepository;
 import hello.core.member.service.MemberService;
 
 public class MemberServiceImpl implements MemberService {
@@ -21,5 +20,10 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public Member findMember(Long memberId) {
         return memberRepository.findById(memberId);
+    }
+
+    //테스트용
+    public MemberRepository getMemberRepository(){
+        return memberRepository;
     }
 }
